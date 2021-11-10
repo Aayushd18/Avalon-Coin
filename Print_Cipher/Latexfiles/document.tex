@@ -1,0 +1,176 @@
+%%%% IACR Transactions TEMPLATE %%%%
+% This file shows how to use the iacrtrans class to write a paper.
+% Written by Gaetan Leurent gaetan.leurent@inria.fr (2020)
+% Public Domain (CC0)
+
+
+%%%% 1. DOCUMENTCLASS %%%%
+\documentclass[journal=tosc,preprint]{iacrtrans}
+%%%% NOTES:
+% - Change "journal=tosc" to "journal=tches" if needed
+% - Change "submission" to "final" for final version
+% - Add "spthm" for LNCS-like theorems
+
+
+%%%% 2. PACKAGES %%%%
+\usepackage{times,amsmath,amsthm,amsfonts,eucal,graphicx,listings,booktabs,lipsum} % Example package -- can be removed
+
+
+%%%% 3. AUTHOR, INSTITUTE %%%%
+\author{Aayush Deshmukh\inst{1,2} \and Aman Khan\inst{1} \and Manohar Das\inst{1}}
+\institute{
+  Institute A, City, Country, \email{jane@institute}
+  \and
+  Institute B, City, Country, \email{john@institute}
+}
+%%%% NOTES:
+% - We need a city name for indexation purpose, even if it is redundant
+%   (eg: University of Atlantis, Atlantis, Atlantis)
+% - \inst{} can be omitted if there is a single institute,
+%   or exactly one institute per author
+
+
+%%%% 4. TITLE %%%%
+\title{PRINT Cipher}
+%%%% NOTES:
+% - If the title is too long, or includes special macro, please
+%   provide a "running title" as optional argument: \title[Short]{Long}
+% - You can provide an optional subtitle with \subtitle.
+
+\begin{document}
+
+\maketitle
+
+
+%%%% 5. KEYWORDS %%%%
+\keywords{Something \and Something else}
+
+
+%%%% 6. ABSTRACT %%%%
+\begin{abstract}
+  In this paper we prove that the One-Time-Pad has perfect security.
+
+\end{abstract}
+
+
+%%%% 7. PAPER CONTENT %%%%
+\section{Introduction}
+
+Widely used primitives like the AES~\cite{AES} do not have perfect
+security, and can be analysed with linear
+cryptanalysis~\cite{EC:Matsui93}, differential
+cryptanalysis~\cite{JC:BihSha91}, or differential power
+analysis~\cite{C:KocJafJun99}.  We show that the One-Time-Pad is
+unconditionally secure in \autoref{sec:main}.
+
+
+
+\section{Main Result}
+\label{sec:main}
+
+\subsection{Sbox Analysis}
+
+The sbox for the PRINT cipher is a 3-bit to 3-bit. Since input is 3-bit so for a b-bit block, the sbox is applied $\frac{b}{3}$ parallely. The current state for the sbox is a $\frac{b}{3}$ words, for each word same sbox is used and the next state is the concatenation of outputs.It is a balanced sbox and has a linear structure.The sbox is given in the following table :- \newline
+
+\begin{table}[ht]
+	\centering
+	\resizebox{10cm}{!}{%
+		\begin{tabular}{|l||l|l|l|l|l|l|l|l|}
+			\hline
+			\multicolumn{1}{|c||}{x} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{2} & \multicolumn{1}{c|}{3} & \multicolumn{1}{c|}{4} & \multicolumn{1}{c|}{5} & \multicolumn{1}{c|}{6} & \multicolumn{1}{c|}{7} \\ \hline
+			s{[}x{]}                & 0                      & 1                      & 3                      & 6                      & 7                      & 4                      & 5                      & 2                      \\ \hline
+		\end{tabular}%
+	}
+\end{table}
+
+\subsubsection{Difference Distribution Table}
+The sbox has a differential branch number defined as min\textsubscript{v, w $\neq$v} \{wt(v $\oplus$ w) + wt(S(v) $\oplus$ S(w))\} of \textbf{2}. The difference distribution table (ddt) which is generated using Sage is as follows :- \newpage
+\begin{table}[h]
+	\centering
+	\resizebox{8cm}{!}{%
+		\begin{tabular}{@{}|l|llllllll|@{}}
+			\toprule
+			& \multicolumn{1}{c}{0} & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{5} & \multicolumn{1}{c}{6} & \multicolumn{1}{c|}{7} \\ \midrule
+			0 & 0                     & 0                     & 0                     & 0                     & 0                     & 0                     & 0                     & 0                      \\
+			1 & 0                     & 2                     & 0                     & 2                     & 0                     & 2                     & 0                     & 2                      \\
+			2 & 0                     & 0                     & 2                     & 2                     & 0                     & 0                     & 2                     & 2                      \\
+			3 & 0                     & 2                     & 2                     & 0                     & 0                     & 2                     & 2                     & 0                      \\
+			4 & 0                     & 0                     & 0                     & 0                     & 2                     & 2                     & 2                     & 2                      \\
+			5 & 0                     & 2                     & 0                     & 2                     & 2                     & 0                     & 2                     & 0                      \\
+			6 & 0                     & 0                     & 2                     & 2                     & 2                     & 2                     & 0                     & 0                      \\
+			7 & 0                     & 2                     & 2                     & 0                     & 2                     & 0                     & 0                     & 2                      \\ \bottomrule
+		\end{tabular}%
+	}
+\end{table}
+
+\subsubsection{Linear Approximation Table}
+The linear branch number which is defined as min\textsubscript{$\alpha$ $\neq$, $\beta$, LAM($\alpha$,$\beta$)$\neq$0}\{wt($\alpha$) + wt($\beta$)\} for this sbox is \textbf{2}. The linearity of this sbox is \textbf{4}. The linear approximation table generated from Sage is as follows:-
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[h]
+	\centering
+	\resizebox{8cm}{!}{%
+		\begin{tabular}{|c|cccccccc|}
+			\hline
+			& 0 & 1  & 2  & 3  & 4  & 5  & 6  & 7  \\ \hline
+			0 & 4 & 0  & 0  & 0  & 0  & 0  & 0  & 0  \\
+			1 & 0 & -2 & 0  & 2  & 0  & 2  & 0  & 2  \\
+			2 & 0 & 0  & 2  & 2  & 0  & 0  & 2  & -2 \\
+			3 & 0 & 2  & -2 & 0  & 0  & 2  & 2  & 0  \\
+			4 & 0 & 0  & 0  & 0  & 2  & -2 & 2  & 2  \\
+			5 & 0 & 2  & 0  & 2  & 2  & 0  & -2 & 0  \\
+			6 & 0 & 0  & 2  & -2 & 2  & 2  & 0  & 0  \\
+			7 & 0 & 2  & 2  & 0  & -2 & 0  & 0  & 2  \\ \hline
+		\end{tabular}%
+	}
+\end{table}
+
+\subsubsection{Additional Properties of Sbox}
+\textbf{1.} The component funcion in 3 variables in algebraic normal form of the sbox is
+\begin{center}
+	\textbf{x0*x2 + x0 + x1*x2}
+\end{center} 
+
+\noindent\textbf{2.} The interpolation polynomial for the sbox is
+\begin{center}
+	\textbf{(a + 1)x\textsuperscript{6} + (a\textsuperscript{2} + a + 1)x\textsuperscript{5} + (a\textsuperscript{2} + 1)x\textsuperscript{3}}
+\end{center}
+
+
+\noindent\textbf{3. } The polynomials which satisfy the sbox is
+\begin{itemize}
+	\item x0*x2 + x0 + x1 + y1
+	\item x0*x1 + x0 + x1 + x2 + y2
+	\item x0*y1 + x0 + x2+ y1 + y2
+	\item x0*y2 + x1 + y1
+	\item x1*x2 + x0 + y0
+	\item x1*y0 + x1 + x2 + y0 + y2
+	\item x0*y0 + x1*y1 + x2 + y2
+	\item x1*y2 + x0 + x1 + y0
+	\item x2*y0 + x1 + y0 + y1
+	\item x2*y1 + x0 + y0
+	\item x0*y0 + x2*y2 + x0 + x1 + x2 + y0 + y1
+	\item y0*y1 + x2 + y0 + y1 + y2
+	\item y0*y2 + x1 + y1
+	\item y1*y2 + x0+ y0 + y1
+\end{itemize}
+\hspace{0.5cm} x - input variables y - output variables \newline
+
+\noindent\textbf{4.} Maximum degree of component function - 2\newline
+
+\noindent\textbf{5.} Minimum degree of component function - 2\newline
+
+\noindent\textbf{6.} Maximal differential probability - 0.25\newline
+
+\noindent\textbf{7.} Absolute maximal linear bias - 2\newline
+
+\noindent\textbf{8.} Relative maximal linear bias - 0.25\newline
+%%%% 8. BILBIOGRAPHY %%%%
+\bibliographystyle{alpha}
+\bibliography{}
+%%%% NOTES
+% - Download abbrev3.bib and crypto.bib from https://cryptobib.di.ens.fr/
+% - Use bilbio.bib for additional references not in the cryptobib database.
+%   If possible, take them from DBLP.
+
+\end{document}
