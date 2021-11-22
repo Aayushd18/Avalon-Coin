@@ -79,6 +79,9 @@ In order to identify items using smart bar-codes we use RFID tags and sensors, t
 
 Most known cryptanalytic results on PRINTcipher are based on weak keys. The best attack results on PRINTcipher are invariance subspace attacks on the full \(PRINTcipher-48/96\). \(PRINTcipher-48\) attack applicable to \(2^{52}\) weak keys and it requires 5 chosen plaintext with a negligible computational complexity. For \(PRINTcipher-96\) the attack is applicable to \(2^{102}\) weak keys and requires 5 chosen plaintext with a negligible computational complexity.
 
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{pics/printcipher.png}
+\end{figure}
 
 
 \section{Main Result}
@@ -284,44 +287,45 @@ To demonstrate the efficiency of proposal they have implemented both PRINTcipher
 
 \subsection{Conclusions}
 In PRINTcipher they have considered the technology of IC-printing to see how it might influence the  cryptography that we use.They have proposed lightweight block cipher PRINTcipher that explicitly takes advantage of this new manufacturing approach. We related-key cryptanalysis of PRINTcipher.To recover the 80-bit secret key of PRINTcipher-48,related-key differential attack require \(2^47\) related-key chosen plaintexts with a computational complexity of \(2^{60.62}\). Further improvement can be done on the basic related-key attack on the full PRINTcipher-48 by considering 43-round related-key differential characteristics 0 $\rightarrow$ \(Case 1 (0)\) 0.
+
 \subsection{Testvectors}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=1cm, width=5cm]{pics/testvector1.png}
 	\caption{Testvector for PRINTcipher-48 in hexadecimal notationAT}
 \end{figure}
-
+\newpage
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=3cm, width=7cm]{pics/testvector-2.png}
 	\caption{Testvectors for PRINTcipher-96 in hexadecimal notation}
 \end{figure}
-
 \begin{figure}[ht]
 	\centering
-	\includegraphics[height=3cm, width=5cm]{pics/pic_1.png}
+	\includegraphics[height=6cm, width=10cm]{pics/pic_1.png}
+	\caption{Sage implementation for Encryption of above plaintext}
+\end{figure}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=6cm, width=10cm]{pics/pic_2.png}
+	\caption{Sage implementation for Encryption of above plaintext}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[height=6cm, width=10cm]{pics/pic_3.png}
 	\caption{Sage implementation for Encryption of above plaintext}
 \end{figure}
 
+
+\newpage
+\subsection{Code Snippet}
 \begin{figure}[ht]
 	\centering
-	\includegraphics[height=4cm, width=7cm]{pics/pic_2.png}
-	\caption{Sage implementation for Encryption of above plaintext}
-\end{figure}
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[height=4cm, width=7cm]{pics/pic_3.png}
-	\caption{Sage implementation for Encryption of above plaintext}
-\end{figure}
-
-
-\section*{Code Snippet}
-\begin{figure}[ht]
-	\centering
-	\includegraphics[height=7cm, width=11cm]{pics/codesnippet.png}
+	\includegraphics[height=10cm, width=\linewidth]{pics/codesnippet.png}
 	\caption{Encryption function of PRINTcipher}
 \end{figure}
+
+
 
 %%%% 8. BILBIOGRAPHY %%%%
 %\bibliographystyle{alpha}
