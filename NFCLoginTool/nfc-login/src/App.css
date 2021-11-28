@@ -1,0 +1,172 @@
+.App {
+  text-align: center;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.lContainer {
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 38px;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: 100vh;
+  background-image: linear-gradient(to bottom right,#578372, #D8DDB7);
+}
+
+.spanLink{
+  color: #1890ff;
+  background-color: transparent;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+
+.footer {
+  color: #5C5470;
+  text-align: center;
+  font-size: 12px;
+  padding: 1rem;
+  user-select: none;
+  margin-top:-45px;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+
+.login-form {
+  width: 300px;
+}
+.login-form-forgot {
+  float: right;
+}
+.login-form-button {
+  background-color: #1B4C60 !important;
+  width: 100%;
+  border: none !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.lItem {
+  width:300px;
+}
+
+.loginForm {
+  background-color: #F5F3E7;
+  padding-left: 30px;
+  padding-top: 20px;
+    margin-top: -60px;
+    margin-left:-30px;
+    margin-right:-30px;
+    border-radius: 8px;
+    border: 1px solid #F5F3E7;
+}
+.loginImage {
+  margin-top: -560px;
+  margin-bottom: 70px;
+}
+
+.loginTitle {
+  margin-top: -500px;
+  padding: 0;
+  font-family: cursive;
+  color: #1B4D60;
+
+}
+.input {
+  background-color: #D8DDB7 !important; 
+}
+
+tbody {
+  font-size: 14px;
+}
+
+.footerLink {
+  text-decoration: none;
+  color: rgb(206, 212, 217);
+}
+
+.homepage {
+  background-color: #F5F3E7;
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+  padding-top: 15px;
+  background-color: #D8DDB7;
+  border-radius:0 0 15px 15px;
+}
+
+.logo {
+  
+  margin-right: auto;
+  margin-left: 60px;
+  cursor: pointer;
+}
+.title {
+  color: #1B4D60;
+  font-size: 35px;
+  font-family: cursive;
+}
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 300px;
+  padding-bottom: 10px;
+}
+
+.tab {
+  font-size: 25px;
+  color: #578372;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-right: 60px;
+  cursor: pointer;
+}
+
+.welcome {
+  align-self:center;
+  font-size: 30px;
+  color: #AA9377;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  padding: 10px;
+}
+
+.intro {
+  background-color: #578372;
+  border-radius: 25px;
+  padding: 30px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cipherTitle {
+  color: #D8DDB7;
+}
+.cipherDetail {
+  font-size: 15px;
+  color: #F5F3E7;
+}
