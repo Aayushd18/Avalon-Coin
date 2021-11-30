@@ -75,9 +75,23 @@
 %%%% 7. PAPER CONTENT %%%%
 \section{Introduction}
 
-In order to identify items using smart bar-codes we use RFID tags and sensors, the security of constrained hardware environments such as RFID tags is major concern in cryptography now a days. PRINTcipher is a 48/96-bit block cipher proposed in CHES 2010 this supports the 80/160-bit secret keys. The key and attractive properties of PRINTcipher are that all rounds use the same round key and differ only by a round counter and that the linear layer is partially key-dependent. The best attack results on PRINTcipher are in-variance subspace attacks on the full \(PRINTcipher-48/96\).\\
+In order to spot items using smart bar-codes, we use RFID tags and sensors, the
+safety of constrained hardware environments like RFID tags is a major concern
+in cryptography nowadays. PRINTcipher maybe a 48/96-bit block cipher
+proposed in CHES 2010 this supports the 80/160-bit secret keys. The essential
+and appealing properties of PRINTcipher are that each one round uses the
+identical round key and differs only by a round counter which the linear layer is
+partially key-dependent. Invariance subspace attacks are promising attack
+results on Printcipher on the whole Printcipher-48/96.
 
-Most known cryptanalytic results on PRINTcipher are based on weak keys. The best attack results on PRINTcipher are invariance subspace attacks on the full \(PRINTcipher-48/96\). \(PRINTcipher-48\) attack applicable to \(2^{52}\) weak keys and it requires 5 chosen plaintext with a negligible computational complexity. For \(PRINTcipher-96\) the attack is applicable to \(2^{102}\) weak keys and requires 5 chosen plaintext with a negligible computational complexity.
+
+Most known cryptanalytic results on PRINTcipher are supported weak keys. Most
+known cryptanalytic results on PRINTcipher are supported weak keys. the
+simplest attack results on PRINTcipher are invariance subspace attacks on the
+complete PRINTcipher - 48/96. P RI N T cipher-48 attack applicable to 252
+weak keys and it requires 5 chosen-plaintext with a negligible computational
+complexity. For PRINT cipher-96 the attack is applicable to 2102 weak keys
+and requires 5 chosen-plaintext with a negligible computational complexity.
 
 \begin{figure}[h]
 	\includegraphics[width=\linewidth]{pics/printcipher.png}
@@ -186,7 +200,14 @@ The linear branch number which is defined as min\textsubscript{$\alpha$ $\neq$, 
 \noindent\textbf{8.} Relative maximal linear bias - 0.25\newline
 
 \subsection{Cryptanalysis of PRINT Cipher}
-We are discussing the weakness of PRINTcipher-48/96 on related-key attacks. Related keys that have different values in the part related to a key-dependent permutation. We construct t-round related key differential characteristics with a probability of \(2^{-t}\). By using these characteristics, we can recover the secret keys of \(PRINTcipher-48/96\). To recover the 80-bit secret key of PRINTcipher-48, our attack requires 4 related keys, \(2^{47}\) related-key chosen plaintexts, and a computational complexity of \(2^{60.62}\). In the case of PRINTcipher-96 we require 4 related keys, \(2^{95}\) related-key chosen plaintext and a computational complexity of \(2^{107}\).
+We are discussing the weakness of PRINTcipher-48/96 on related-key attacks.
+Related keys that have different values within the part associated with a key-
+dependent permutation. We construct t-round related key differential
+characteristics with a probability of 2\textsuperscript{-t}. 4 related keys are required to recover
+the 80-bit secret keys of PRINTcipher-48, 2\textsuperscript{47} related-key chosen plaintexts,
+and a computational complexity of 2\textsuperscript{60.62}. In the case of PRINTcipher-96 we
+require 4 related keys, 2\textsuperscript{95} related-key chosen plaintext and a computational
+complexity of 2\textsuperscript{107}.
 
 \subsection{Construction of Related-Key Differential Characteristics on PRINTcipher}
 \subsubsection{Steps to construct  \(t-round\) related-key differential characteristics on printcipher by using properties of a key-dependent permutation KP and S-box}
@@ -246,7 +267,10 @@ We will apply few property on proposed attack by considering related key-pair: \
 \end{multicols}
 
 
-Let input difference of the target round is zero. If key-pair \(K, {k^*}\) satisfies Case 1 (0), \(K{P_0}\) has a nonzero related-key difference. We can construct 1-round related-key differential characteristic \newline 0 $\rightarrow$ \(Case 1 (0)\) 0 with a probability of \(2^{-1}\)under case 1. Since PRINTcipher-48 uses the same round key for all rounds, we can extend this result to a t-round related-key differential characteristic.
+Let input difference of the target round is zero. If key-pair K, k$*$ satisfies Case 1(0), KP0 incorporates a nonzero related-key difference. we will construct 1-round related-key differential characteristic 0 $\rightarrow$ Case1(0) 0 with a probability of
+\(2^{-1}\)under case 1. Since PRINTcipher-48 uses the identical round key for all
+rounds, we will extend this result to a t-round related-key differential
+characteristic.
 
 \begin{figure}[ht]
 	\centering
@@ -262,14 +286,15 @@ Let input difference of the target round is zero. If key-pair \(K, {k^*}\) satis
 %\end{figure}
 \newpage
 \subsubsection{Related-Key Cryptanalysis on PRINTcipher-48}
-we can construct t-round related-key differential characteristics on PRINTcipher-48 with a probability of \(2^{-t}\). These related-key differential characteristics depend on the concrete key value. These related-key differential characteristics depend on the concrete key value. To solve this, we use 4 related keys (\({K_0}^{(0,0)}\), \({K_0}^{(0,1)}\), \({K_0}^{(1,0)}\), \({K_0}^{(1,1)}\)). In detail, two key pairs (\({K_0}^{(0,0)}\), \({K_0}^{(0,1)}\)) and (\({K_0}^{(1,0)}\), \({K_0}^{(1,1)}\)) are considered.
+we can construct t-round related-key differential characteristics on PRINTcipher-48 with a probability of 2\textsuperscript{-t}. These related-key differential characteristics rely upon the concrete key value. These related-key differential characteristics depend upon the concrete key value. to unravel this, we use 4 (\({K_0}^{(0,0)}\), \({K_0}^{(0,1)}\), \({K_0}^{(1,0)}\), \({K_0}^{(1,1)}\)). In detail, two key pairs (\({K_0}^{(0,0)}\), \({K_0}^{(0,1)}\)) and (\({K_0}^{(1,0)}\), \({K_0}^{(1,1)}\)) are considered.
 
 \subsubsection{Basic Related-Key Attack on PRINTcipher-48}
-44-round related-key differential characteristic with probability of \(2^{-44}\) is needed to attack full print cipher-48.
+44-round related-key differential characteristic with probability of \(2^{-44}\) is required to attack a full print cipher-48.
 Steps for attack procedure:-
 \begin{itemize}
-	\item Consider plain text strucutres each of four plaintext
-	\item Discard the wrong ciphertext pairs from the difference between ciphertexts. For the right ciphertext pair, the output difference of round 45 should be zero.
+	\item Consider plain text strucutres of 4 plaintext each
+	\item Discard the incorrect ciphertext pairs from the difference between
+	ciphertexts. For the proper ciphertext pair, the output difference of round 45 should be zero.
 	\item Guess the partial secret key
 	\item Determine related-key pairs satisfying Case 1 (0)
 \end{itemize}
@@ -278,7 +303,11 @@ Steps for attack procedure:-
 For plaintext strucutre step computational complexity is  \(2^48\) PRINTcipher-48 encryptions. Next, we discard wrong pair with ciphertext pairs servied is \(2^10(=8.2^{44}.2^{-37})\). Total computational complexity of the attack is \(2^{63}\).
 
 \subsection{Experiment Results}
-To demonstrate the efficiency of proposal they have implemented both PRINTcipher variants in VHDL and used Synopsys DesignVision 2007.12 to synthesize them using the Virtual Silicon (VST) standard cell library UMCL18G212T3, which is based on the UMC L180 0.18$\mu$m 1P6M logic process and has a typical voltage of 1.8 Volt.
+To demonstrate the efficiency of the proposal they need to implement both
+PRINTcipher variants in VHDL and used Synopsys DesignVision 2007.12 to
+synthesize them using the Virtual Silicon (VST) primary cell library
+UMCL18G212T3, which is predicated on the UMC L180 0.18$\mu$m. 1P6M logic
+process and incorporates a typical voltage of 1.8 Volt.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=7cm, width=12cm]{pics/hardware.png}
@@ -288,13 +317,15 @@ To demonstrate the efficiency of proposal they have implemented both PRINTcipher
 \subsection{Conclusions}
 In PRINTcipher they have considered the technology of IC-printing to see how it might influence the  cryptography that we use.They have proposed lightweight block cipher PRINTcipher that explicitly takes advantage of this new manufacturing approach. We related-key cryptanalysis of PRINTcipher.To recover the 80-bit secret key of PRINTcipher-48,related-key differential attack require \(2^47\) related-key chosen plaintexts with a computational complexity of \(2^{60.62}\). Further improvement can be done on the basic related-key attack on the full PRINTcipher-48 by considering 43-round related-key differential characteristics 0 $\rightarrow$ \(Case 1 (0)\) 0.
 
+
+
+\newpage
 \subsection{Testvectors}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=1cm, width=5cm]{pics/testvector1.png}
 	\caption{Testvector for PRINTcipher-48 in hexadecimal notationAT}
 \end{figure}
-\newpage
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=3cm, width=7cm]{pics/testvector-2.png}
@@ -310,7 +341,7 @@ In PRINTcipher they have considered the technology of IC-printing to see how it 
 	\includegraphics[height=6cm, width=10cm]{pics/pic_2.png}
 	\caption{Sage implementation for Encryption of above plaintext}
 \end{figure}
-\begin{figure}
+\begin{figure}[ht]
 	\centering
 	\includegraphics[height=6cm, width=10cm]{pics/pic_3.png}
 	\caption{Sage implementation for Encryption of above plaintext}
@@ -318,14 +349,27 @@ In PRINTcipher they have considered the technology of IC-printing to see how it 
 
 
 \newpage
-\subsection{Code Snippet}
-\begin{figure}[ht]
+\section{Code Snippet}
+The code is implemented in Python.The code snippet is given below :-
+\begin{figure}
 	\centering
 	\includegraphics[height=10cm, width=\linewidth]{pics/codesnippet.png}
 	\caption{Encryption function of PRINTcipher}
 \end{figure}
 
+\newpage
+\subsection{Software Application Implementation}  
+The motivation behind the development of the PRINT Cipher is the issue that in RFID applications, it is not required to change the key. It is rather considered as an overhead in RFID applications. Hence, PRINT Cipher is developed which requires a single key and it has been declared efficient for many applications such as fabrication of cheap RFID tags.The other concern was using a simple key schedule where subkeys are created in a simple fashion. So this cipher fulfilled the need and no working memory is needed for the subkey computations.
 
+Here we are implementing an NFC/RFID compatible, platform independent login tool where the credentials are secured using PRINT Cipher. The usage of PRINT Cipher here provides fast access to RFID tags and NFC devices. The application provides a secure form of authentication that has been used in smart cards and mobile authentication. The basic idea is, that once you tap an authorized tag on the reader, the appropriate password is decrypted and typed on an emulated keyboard.
+Once configured, you only need the HID driver on the host system. The basic idea is that when you tap a tag allowed by the reader, the corresponding password will be decrypted and entered into the emulated keyboard.
+Here a simulator has been developed where a login form will be shown and the credentials entered will be encrypted and secured using PRINT Cipher and when they match a secured login is successfully done. Here to demonstrate the efficiency, PRINT Cipher-48 is used in the login tool.
+As the cipher was designed by focusing more on the hardware efficiency, the performance of PRINT Cipher for any software implementation is slower [inefficient as compared to well known and widely used cipher like AES]than that of many well known and widely used ciphers like AES. It is observed that over a 64-bit platform, the performance of PRINT Cipher is 5-10 times slower than AES implementation.
+\begin{figure}[ht]
+	\centering
+	\includegraphics{pics/logintool.png}
+	\caption{Figure: Login Mechanism Flow Chart}
+\end{figure}
 
 %%%% 8. BILBIOGRAPHY %%%%
 %\bibliographystyle{alpha}

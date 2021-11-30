@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.4.3)  28 NOV 2021 21:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.4.3)  30 NOV 2021 16:12
 entering extended mode
 **./document.tex
 (document.tex
@@ -913,23 +913,18 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 IACR@AUTHOR: Manohar Lal Das, Aman Khan, Aayush Deshmukh
 IACR@TITLE: PRINT Cipher
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
-
- []
-
-<pics/printcipher.png, id=45, 319.72247pt x 119.10097pt>
+<pics/printcipher.png, id=49, 319.72247pt x 119.10097pt>
 File: pics/printcipher.png Graphic file (type png)
 <use pics/printcipher.png>
-Package pdftex.def Info: pics/printcipher.png  used on input line 83.
+Package pdftex.def Info: pics/printcipher.png  used on input line 97.
 (pdftex.def)             Requested size: 388.37646pt x 144.67596pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
  []
 
 
-Underfull \vbox (badness 2418) has occurred while \output is active []
+Underfull \vbox (badness 1308) has occurred while \output is active []
 
  [1.1
 
@@ -939,123 +934,128 @@ pics/printcipher.png>]
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2.2]
-Underfull \hbox (badness 10000) in paragraph at lines 176--177
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--181
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--185
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--187
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
 
 [3.3]
-Overfull \hbox (38.41946pt too wide) in paragraph at lines 191--191
+Overfull \hbox (38.41946pt too wide) in paragraph at lines 212--212
 []\T1/phv/b/n/12 (-20) Construction of Related-Key Differential Characteristics
  on PRINTcipher 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--195
+Underfull \hbox (badness 10000) in paragraph at lines 214--216
 
  []
 
-<pics/oneround.png, id=76, 505.89pt x 184.18813pt>
+<pics/oneround.png, id=79, 505.89pt x 184.18813pt>
 File: pics/oneround.png Graphic file (type png)
 <use pics/oneround.png>
-Package pdftex.def Info: pics/oneround.png  used on input line 253.
+Package pdftex.def Info: pics/oneround.png  used on input line 277.
 (pdftex.def)             Requested size: 341.43785pt x 227.6208pt.
 [4.4]
-Overfull \hbox (5.05252pt too wide) in paragraph at lines 265--266
+Overfull \hbox (5.05252pt too wide) in paragraph at lines 289--290
 \T1/ptm/m/n/10 (-20) we can construct t-round related-key differential characte
 ristics on PRINTcipher-48 with a probability
  []
 
-<pics/hardware.png, id=85, 543.53062pt x 457.71pt>
+<pics/hardware.png, id=89, 543.53062pt x 457.71pt>
 File: pics/hardware.png Graphic file (type png)
 <use pics/hardware.png>
-Package pdftex.def Info: pics/hardware.png  used on input line 284.
+Package pdftex.def Info: pics/hardware.png  used on input line 313.
 (pdftex.def)             Requested size: 341.44745pt x 199.1651pt.
-[5.5 <./pics/oneround.png>]
-<pics/testvector1.png, id=95, 513.41812pt x 41.15375pt>
+[5.5 <./pics/oneround.png>] [6.6 <./pics/hardware.png>]
+<pics/testvector1.png, id=105, 513.41812pt x 41.15375pt>
 File: pics/testvector1.png Graphic file (type png)
 <use pics/testvector1.png>
-Package pdftex.def Info: pics/testvector1.png  used on input line 294.
+Package pdftex.def Info: pics/testvector1.png  used on input line 326.
 (pdftex.def)             Requested size: 142.25977pt x 28.45325pt.
- [6.6 <./pics/hardware.png> <./pics/testvector1.png>]
-<pics/testvector-2.png, id=104, 484.30937pt x 173.14688pt>
+<pics/testvector-2.png, id=106, 484.30937pt x 173.14688pt>
 File: pics/testvector-2.png Graphic file (type png)
 <use pics/testvector-2.png>
-Package pdftex.def Info: pics/testvector-2.png  used on input line 300.
+Package pdftex.def Info: pics/testvector-2.png  used on input line 331.
 (pdftex.def)             Requested size: 199.1667pt x 85.36053pt.
-<pics/pic_1.png, id=105, 440.14438pt x 164.11313pt>
+<pics/pic_1.png, id=107, 440.14438pt x 164.11313pt>
 File: pics/pic_1.png Graphic file (type png)
 <use pics/pic_1.png>
-Package pdftex.def Info: pics/pic_1.png  used on input line 305.
+Package pdftex.def Info: pics/pic_1.png  used on input line 336.
 (pdftex.def)             Requested size: 284.53903pt x 170.71869pt.
-<pics/pic_2.png, id=106, 328.22626pt x 102.3825pt>
+<pics/pic_2.png, id=108, 328.22626pt x 102.3825pt>
 File: pics/pic_2.png Graphic file (type png)
 <use pics/pic_2.png>
-Package pdftex.def Info: pics/pic_2.png  used on input line 310.
+Package pdftex.def Info: pics/pic_2.png  used on input line 341.
 (pdftex.def)             Requested size: 284.53284pt x 170.7282pt.
-<pics/pic_3.png, id=107, 334.24875pt x 116.93687pt>
+<pics/pic_3.png, id=109, 334.24875pt x 116.93687pt>
 File: pics/pic_3.png Graphic file (type png)
 <use pics/pic_3.png>
-Package pdftex.def Info: pics/pic_3.png  used on input line 315.
+Package pdftex.def Info: pics/pic_3.png  used on input line 346.
 (pdftex.def)             Requested size: 284.55139pt x 170.73709pt.
- [7.7 <./pics/testvector-2.png> <./pics/pic_1.png>]
-<pics/codesnippet.png, id=117, 730.22812pt x 670.00313pt>
+ [7.7 <./pics/testvector1.png> <./pics/testvector-2.png> <./pics/pic_1.png>]
+<pics/codesnippet.png, id=121, 730.22812pt x 670.00313pt>
 File: pics/codesnippet.png Graphic file (type png)
 <use pics/codesnippet.png>
-Package pdftex.def Info: pics/codesnippet.png  used on input line 324.
+Package pdftex.def Info: pics/codesnippet.png  used on input line 356.
 (pdftex.def)             Requested size: 388.37843pt x 284.52776pt.
+ [8.8 <./pics/pic_2.png> <./pics/pic_3.png>]
+<pics/logintool.png, id=130, 274.04784pt x 260.75015pt>
+File: pics/logintool.png Graphic file (type png)
+<use pics/logintool.png>
+Package pdftex.def Info: pics/logintool.png  used on input line 370.
+(pdftex.def)             Requested size: 274.04716pt x 260.74951pt.
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/stringenc\se-pdfdoc.def"
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/stringenc\se-utf8.def"
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
-) [8.8 <./pics/pic_2.png> <./pics/pic_3.png>] [9.9 <./pics/codesnippet.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 338.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 338.
+) [9.9 <./pics/codesnippet.png>] [10.10 <./pics/logintool.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 382.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 382.
  (document.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 338.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 338.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 382.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 382.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: D5E73936C923515375D2A6D4E580B82C;601.
+(rerunfilecheck)             Checksum: 572EC1D32AC5B56CF27FC4CE7EFAF6E6;672.
  )
 (\end occurred when \iftrue on line 72 was incomplete) 
 Here is how much of TeX's memory you used:
- 15535 strings out of 480934
- 241987 string characters out of 2909654
- 706539 words of memory out of 3000000
- 30805 multiletter control sequences out of 15000+200000
- 621661 words of font info for 204 fonts, out of 3000000 for 9000
+ 15569 strings out of 480934
+ 242336 string characters out of 2909654
+ 708141 words of memory out of 3000000
+ 30811 multiletter control sequences out of 15000+200000
+ 622701 words of font info for 220 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,11n,73p,1007b,459s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 
-2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
-ps/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}{C
-:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}<C:/Program Files/MiKTe
+2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/l
+m/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{
+C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/lm/lmbsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi7
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmib10.pfb><C:/Program
@@ -1067,9 +1067,9 @@ gram Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX
 rw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhv
 b8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on document.pdf (9 pages, 994455 bytes).
+Output written on document.pdf (10 pages, 1070169 bytes).
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
- 69754 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 204 PDF objects out of 1000 (max. 8388607)
+ 38 named destinations out of 1000 (max. 500000)
+ 69767 words of extra memory for PDF output out of 74296 (max. 10000000)
 
