@@ -52,9 +52,36 @@ body {
   float: right;
 }
 .login-form-button {
-  background-color: #1B4C60 !important;
+  background-color: #1B4C60;
   width: 100%;
-  border: none !important;
+  height: 40px;
+  /* height: 200px !important; */
+  border: none;
+  margin: 5px;
+  margin-top: 20px;
+  color: #F5F3E7;
+  padding: 10px;
+}
+
+
+
+.inputlabel {
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  color: #1B4C60;
+}
+
+.inputfield {
+  background-color: #D8DDB7;
+  margin-left: 20px;
+  height: 30px;
+  width: 80%;
+  border: 0;
+  padding: 10px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box; 
 }
 
 .hidden {
@@ -99,10 +126,72 @@ tbody {
   text-decoration: none;
   color: rgb(206, 212, 217);
 }
+.checkboxContainer {
+  margin-top: 20px;
+  margin-left: 30px;
+  width: 100%;
+}
+
+.checkbox {
+  height: 20px;
+  width: 20px;
+}
+
+.checkboxlabel {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.buttonContainer {
+  display: flex;
+  height: 100px;
+  width: 300px;
+}
 
 .homepage {
   background-color: #F5F3E7;
   height: 100vh;
+}
+.mymodal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 150px;
+  width: 300px;
+
+  border: 1px solid #ccc;
+  background: #fff;
+  overflow:visible;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+}
+.modalTitle {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.myoverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
 }
 
 .navbar {

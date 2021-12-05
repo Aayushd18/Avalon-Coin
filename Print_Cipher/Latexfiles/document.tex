@@ -75,23 +75,8 @@
 %%%% 7. PAPER CONTENT %%%%
 \section{Introduction}
 
-In order to spot items using smart bar-codes, we use RFID tags and sensors, the
-safety of constrained hardware environments like RFID tags is a major concern
-in cryptography nowadays. PRINTcipher maybe a 48/96-bit block cipher
-proposed in CHES 2010 this supports the 80/160-bit secret keys. The essential
-and appealing properties of PRINTcipher are that each one round uses the
-identical round key and differs only by a round counter which the linear layer is
-partially key-dependent. Invariance subspace attacks are promising attack
-results on Printcipher on the whole Printcipher-48/96.
-
-
-Most known cryptanalytic results on PRINTcipher are supported weak keys. Most
-known cryptanalytic results on PRINTcipher are supported weak keys. the
-simplest attack results on PRINTcipher are invariance subspace attacks on the
-complete PRINTcipher - 48/96. P RI N T cipher-48 attack applicable to 252
-weak keys and it requires 5 chosen-plaintext with a negligible computational
-complexity. For PRINT cipher-96 the attack is applicable to 2102 weak keys
-and requires 5 chosen-plaintext with a negligible computational complexity.
+In order to spot items using smart bar-codes, we use RFID tags and sensors, the safety of contrived hardware devices like RFID tags is a major concern in cryptography nowadays. PRINT Cipher, which was introduced in two forms a 48-bit and another 96-bit cipher, was published in “Cryptographic Hardware and Embedded systems ( CHES 2010 )”. This cipher can have either 80 or 160 bit unrevealed keys. The essential and appealing properties of PRINTcipher are that each one round uses the identical round key and differs only by a round counter in which the linear layer is partially key-dependent. Invariance subspace attacks are promising attack results on PRINT Cipher on the whole Printcipher- 48/96. Here the supported weak keys are considered as the very well known Cryptanalytic result, and the simplest attack encountered is invariance subspace attacks on the complete PRINTcipher - 48/96.
+It requires 5 choosen plaintexts that are applicable to PRINT Cipher- 48 attacks which has 2\textsuperscript{53} weak keys, and whose computational complexity is negligible. Similarly 2\textsuperscript{102} Weak Key is there in PRINT Cipher- 96 and the attack requires five chosen plaintexts whose computational complexity is negligible.
 
 \begin{figure}[h]
 	\includegraphics[width=\linewidth]{pics/printcipher.png}
@@ -103,24 +88,18 @@ and requires 5 chosen-plaintext with a negligible computational complexity.
 
 \subsection{Sbox Analysis}
 
-The sbox for the PRINT cipher is a 3-bit to 3-bit. Since input is 3-bit so for a b-bit block, the sbox is applied $\frac{b}{3}$ parallely. The current state for the sbox is a $\frac{b}{3}$ words, for each word same sbox is used and the next state is the concatenation of outputs.It is a balanced sbox and has a linear structure.The sbox is given in the following table :- \newline
+The sbox for the PRINT cipher is a 3-bit to 3-bit. Since input is 3-bit so for a b-bit block, the sbox is applied $\frac{b}{3}$ parallely. The current state for the sbox is a $\frac{b}{3}$ words, for each word same sbox is used and concatinating the output gives the next state.It is a balanced sbox and has a linear structure.The sbox is shown below :- 
 
-\begin{table}[ht]
+\begin{figure}[ht]
 	\centering
-	\resizebox{10cm}{!}{%
-		\begin{tabular}{|l||l|l|l|l|l|l|l|l|}
-			\hline
-			\multicolumn{1}{|c||}{x} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{2} & \multicolumn{1}{c|}{3} & \multicolumn{1}{c|}{4} & \multicolumn{1}{c|}{5} & \multicolumn{1}{c|}{6} & \multicolumn{1}{c|}{7} \\ \hline
-			s{[}x{]}                & 0                      & 1                      & 3                      & 6                      & 7                      & 4                      & 5                      & 2                      \\ \hline
-		\end{tabular}%
-	}
-\end{table}
+	\includegraphics{pics/sbox1.png}
+\end{figure}
 
 \subsubsection{Difference Distribution Table}
 The sbox has a differential branch number defined as min\textsubscript{v, w $\neq$v} \{wt(v $\oplus$ w) + wt(S(v) $\oplus$ S(w))\} of \textbf{2}. The difference distribution table (ddt) which is generated using Sage is as follows :- 
 \begin{table}[h]
 	\centering
-	\resizebox{8cm}{!}{%
+	\resizebox{7cm}{!}{%
 		\begin{tabular}{@{}|l|llllllll|@{}}
 			\toprule
 			& \multicolumn{1}{c}{0} & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{5} & \multicolumn{1}{c}{6} & \multicolumn{1}{c|}{7} \\ \midrule
@@ -137,10 +116,10 @@ The sbox has a differential branch number defined as min\textsubscript{v, w $\ne
 \end{table}
 
 \subsubsection{Linear Approximation Table}
-The linear branch number which is defined as min\textsubscript{$\alpha$ $\neq$, $\beta$, LAM($\alpha$,$\beta$)$\neq$0}\{wt($\alpha$) + wt($\beta$)\} for this sbox is \textbf{2}. The linearity of this sbox is \textbf{4}. The linear approximation table generated from Sage is as follows:-
+The linear branch number which is denoted by min\textsubscript{$\alpha$ $\neq$, $\beta$, LAM(a,b)$\neq$0}\{wt(a) + wt(b)\} for this sbox is \textbf{2}. The linearity of this sbox is \textbf{4}. The linear approximation table generated from Sage is as follows:-
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
-\begin{table}[h]
+\begin{table}[ht]
 	\centering
 	\resizebox{8cm}{!}{%
 		\begin{tabular}{|c|cccccccc|}
@@ -170,24 +149,10 @@ The linear branch number which is defined as min\textsubscript{$\alpha$ $\neq$, 
 \end{center}
 
 
-\noindent\textbf{3. } The polynomials which satisfy the sbox is
-\begin{itemize}
-	\item x0*x2 + x0 + x1 + y1
-	\item x0*x1 + x0 + x1 + x2 + y2
-	\item x0*y1 + x0 + x2+ y1 + y2
-	\item x0*y2 + x1 + y1
-	\item x1*x2 + x0 + y0
-	\item x1*y0 + x1 + x2 + y0 + y2
-	\item x0*y0 + x1*y1 + x2 + y2
-	\item x1*y2 + x0 + x1 + y0
-	\item x2*y0 + x1 + y0 + y1
-	\item x2*y1 + x0 + y0
-	\item x0*y0 + x2*y2 + x0 + x1 + x2 + y0 + y1
-	\item y0*y1 + x2 + y0 + y1 + y2
-	\item y0*y2 + x1 + y1
-	\item y1*y2 + x0+ y0 + y1
-\end{itemize}
-\hspace{0.5cm} x - input variables y - output variables \newline
+\noindent\textbf{3. } The polynomials which satisfy the sbox are :-
+\begin{figure}[ht]
+	\includegraphics{pics/polynomials.png}
+\end{figure}
 
 \noindent\textbf{4.} Maximum degree of component function - 2\newline
 
@@ -200,82 +165,44 @@ The linear branch number which is defined as min\textsubscript{$\alpha$ $\neq$, 
 \noindent\textbf{8.} Relative maximal linear bias - 0.25\newline
 
 \subsection{Cryptanalysis of PRINT Cipher}
-We are discussing the weakness of PRINTcipher-48/96 on related-key attacks.
-Related keys that have different values within the part associated with a key-
-dependent permutation. We construct t-round related key differential
-characteristics with a probability of 2\textsuperscript{-t}. 4 related keys are required to recover
-the 80-bit secret keys of PRINTcipher-48, 2\textsuperscript{47} related-key chosen plaintexts,
-and a computational complexity of 2\textsuperscript{60.62}. In the case of PRINTcipher-96 we
-require 4 related keys, 2\textsuperscript{95} related-key chosen plaintext and a computational
-complexity of 2\textsuperscript{107}.
+
+
+While in related-key attacks on PRINTcipher-48/96 to find the weakness. On key-dependent permutation part related key have different values. By constructing related key of t-round the differential characteristics is of probability 2\textsuperscript{-t} so we will be able to extract the secret keys used PRINTcipher-48/96. 
+
+To get back  80-bit secret key of PRINTcipher-48 it need 4 related key
+PRINTcipher-48 need 2\textsuperscript{47} related-key chosen plaintexts with complexity of 2\textsuperscript{60.62}
+To get back  160-bit secret key of PRINTcipher-96 it need 4 related key
+PRINTcipher-96 need 2\textsuperscript{47} related-key chosen plaintexts with complexity of 2\textsuperscript{107}
 
 \subsection{Construction of Related-Key Differential Characteristics on PRINTcipher}
-\subsubsection{Steps to construct  \(t-round\) related-key differential characteristics on printcipher by using properties of a key-dependent permutation KP and S-box}
-Related-Key Properties on Key-Dependent Permutation and S-Box:-
-3 -bit input value (y\textsubscript{0}, y\textsubscript{1}, y\textsubscript{2}) of a key-dependent permutation of \({KP_l}\). If a 2-bit round key \({s{k^2_l\textsubscript{0}}},{sk^2_l\textsubscript{1}}\) is equal to (0,0) or (0,1)  \\
+Using attributes of a key-dependent permutation KP and S-box, steps to produce t round related-key differential characteristics on printcipher
+\subsubsection{S-Box and Related-Key Properties on Key-Dependent Permutation :-}
+ A key-dependent permutation KP\textsubscript{l} with a 3-bit input value (y0, y1, y2). Round-key of 2-bit is  is equal to (0,0) or  (0,1)
 
-corresponding output value is computed as follows:
-\begin{center}
-	(0,0): \(({y_0},{y_1},{y_2})\) $\rightarrow$ \({KP_l}^{00}\) 			  \(({y_0},{y_1},{y_2})\) \\
-	(0,1): \(({y_0},{y_1},{y_2})\) $\rightarrow$ \({KP_l}^{01}\) \(({y_1},{y_0},{y_2})\) \\
-\end{center}
+\begin{figure}[ht]
+	\centering\includegraphics[width=5cm]{pics/3.png}
+\end{figure}
 
-In the above relations, if \({y_0}\) is equal to \({y_1}\), each permutation outputs the same value and vice versa. That is, the following equation holds:
-\begin{center}
-
-\({y_0}\) = \({y_1}\) $\Leftrightarrow$ \({KP_l}^{00}\)\(({y_0},{y_1},{y_2})\) = \({KP_l}^{01}\)\(({y_0},{y_1},{y_2})\)
-\end{center}
-
-
-\textbf{Properties of KP:-}
-
-Consider: \({y_0}\) = \({y_1}\) $\Leftrightarrow$ \({KP_l}^{00}\)\(({y_0},{y_1},{y_2})\) = \({KP_l}^{01}\)\(({y_0},{y_1},{y_2})\)
-
-Consider: \({y_1}\) = \({y_2}\) $\Leftrightarrow$ \({KP_l}^{00}\)\(({y_0},{y_1},{y_2})\) = \({KP_l}^{10}\)\(({y_0},{y_1},{y_2})\)
-
-Consider: \({y_0}\) = \({y_2}\) $\Leftrightarrow$ \({KP_l}^{00}\)\(({y_0},{y_1},{y_2})\) = \({KP_l}^{11}\)\(({y_0},{y_1},{y_2})\)
-
-Consider: \({y_0}\) = \({y_1}\) = \({y_2}\) $\Leftrightarrow$ \({KP_l}^{01}\)\(({y_0},{y_1},{y_2})\) = \({KP_l}^{10}\)\(({y_0},{y_1},{y_2})\)
-
-Consider: \({y_0}\) = \({y_1}\) = \({y_2}\) $\Leftrightarrow$ \({KP_l}^{01}\)\(({y_0},{y_1},{y_2})\) = \({KP_l}^{11}\)\(({y_0},{y_1},{y_2})\)
-
-Consider: \({y_0}\) = \({y_1}\) = \({y_2}\) $\Leftrightarrow$ \({KP_l}^{10}\)\(({y_0},{y_1},{y_2})\) = \({KP_l}^{11}\)\(({y_0},{y_1},{y_2})\)
-
-\subsubsection{Related-Key Differential Characteristics on PRINTcipher-48}
-
-We will apply few property on proposed attack by considering related key-pair: \newline
-\((K = (S{K^1},S{K^2}, {K^*} = (S{K^1\textsuperscript{*}},S{K^2\textsuperscript{*}})\)
-
-\(l = 0,....,15\)
-
-\begin{multicols}{3}
+\begin{figure}[ht]
 	\centering
-\textbf{Case 1 (l)}
-\(S{K^1}=S{K^1\textsuperscript{*}}\);\\
-\(S{K_l^2}=(0,0), S{K_l^2\textsuperscript{*}}=(0,1)\);\\
-\(S{K_i^2}=S{K_i^2\textsuperscript{*}}\)where i != l;\\
+	\includegraphics{pics/1.png}
+\end{figure}
 
-\textbf{Case 2 (l)}
-\(S{K^1}=S{K^1\textsuperscript{*}}\);\\
-\(S{K_l^2}=(0,0), S{K_l^2\textsuperscript{*}}=(1,0)\);\\
-\(S{K_i^2}=S{K_i^2\textsuperscript{*}}\)where i != l;\\
+\subsubsection{PRINTcipher-48 Related-Key Differential Characteristics}
 
-\textbf{Case 3 (l)}
-\(S{K^1}=S{K^1\textsuperscript{*}}\);\\
-\(S{K_l^2}=(0,0), S{K_l^2\textsuperscript{*}}=(1,1)\);\\
-\(S{K_i^2}=S{K_i^2\textsuperscript{*}}\)where i != l;\\
-\end{multicols}
+By evaluating similar key-pairs, we shall apply a few properties to the proposed attack.: \newline
+\begin{figure}[ht]
+	\includegraphics{pics/2.png}
+\end{figure}
 
 
-Let input difference of the target round is zero. If key-pair K, k$*$ satisfies Case 1(0), KP0 incorporates a nonzero related-key difference. we will construct 1-round related-key differential characteristic 0 $\rightarrow$ Case1(0) 0 with a probability of
-\(2^{-1}\)under case 1. Since PRINTcipher-48 uses the identical round key for all
-rounds, we will extend this result to a t-round related-key differential
-characteristic.
+Suppose input difference of the target round is zero. If a paired key (k, k*) 
+satisfies Case 1(0), key-dependent permutation incorporates a nonzero-related key difference. We will construct 1-round related-key differential characteristic 0 → Case1(0) with a probability of 2\textsuperscript{-1} under case 1. t-round related-key differential characteristic result further can be easily extended since PRINTcipher uses the identical round key for all round.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=8cm, width=12cm]{pics/oneround.png}
-	\caption{1-round related-key differential characteristic under Case 1 (0)}
+	\caption{One-round differential characteristic of related-key under Case-1-(0)}
 \end{figure}
 
 
@@ -285,37 +212,33 @@ characteristic.
 	%\caption{1-round related-key differential characteristic under Case 1 (0)}
 %\end{figure}
 \newpage
-\subsubsection{Related-Key Cryptanalysis on PRINTcipher-48}
-we can construct t-round related-key differential characteristics on PRINTcipher-48 with a probability of 2\textsuperscript{-t}. These related-key differential characteristics rely upon the concrete key value. These related-key differential characteristics depend upon the concrete key value. to unravel this, we use 4 (\({K_0}^{(0,0)}\), \({K_0}^{(0,1)}\), \({K_0}^{(1,0)}\), \({K_0}^{(1,1)}\)). In detail, two key pairs (\({K_0}^{(0,0)}\), \({K_0}^{(0,1)}\)) and (\({K_0}^{(1,0)}\), \({K_0}^{(1,1)}\)) are considered.
+\subsubsection{PRINTcipher-48 Related-Key Cryptanalysis}
+On PRINTcipher-48, a differential t-round related-key features with the probability of 2\textsuperscript{-t} can be built. Differential characteristics of related-key rely upon concrete key value. (K\textsubscript{0}\textsuperscript{0,0}, K\textsubscript{0}\textsuperscript{0,1}) and (K\textsubscript{0}\textsuperscript{1,0}, K\textsubscript{0}\textsuperscript{(1,1)}) key pairs are used to solve this issue.
 
 \subsubsection{Basic Related-Key Attack on PRINTcipher-48}
-44-round related-key differential characteristic with probability of \(2^{-44}\) is required to attack a full print cipher-48.
+
 Steps for attack procedure:-
 \begin{itemize}
 	\item Consider plain text strucutres of 4 plaintext each
-	\item Discard the incorrect ciphertext pairs from the difference between
-	ciphertexts. For the proper ciphertext pair, the output difference of round 45 should be zero.
-	\item Guess the partial secret key
-	\item Determine related-key pairs satisfying Case 1 (0)
+	\item Wrong cipher text pair are deleted from the difference between ciphertexts.
+	\item Output difference of round 45 should be 0 for a good ciphertext pair.
+	\item Next, partial secret key is guessed.
 \end{itemize}
 
+
 \subsubsection{Complexities of Basic Related-Key Attack on PRINTcipher-48}
-For plaintext strucutre step computational complexity is  \(2^48\) PRINTcipher-48 encryptions. Next, we discard wrong pair with ciphertext pairs servied is \(2^10(=8.2^{44}.2^{-37})\). Total computational complexity of the attack is \(2^{63}\).
+For plaintext strucutre step computational complexity is  \(2^{48}\) PRINTcipher-48 encryptions. Next, we discard wrong pair with ciphertext pairs servied is \(2^{10}(=8.2^{44}.2^{-37})\). Total computational complexity of the attack is \(2^{63}\).
 
 \subsection{Experiment Results}
-To demonstrate the efficiency of the proposal they need to implement both
-PRINTcipher variants in VHDL and used Synopsys DesignVision 2007.12 to
-synthesize them using the Virtual Silicon (VST) primary cell library
-UMCL18G212T3, which is predicated on the UMC L180 0.18$\mu$m. 1P6M logic
-process and incorporates a typical voltage of 1.8 Volt.
+They needed to implement both PRINTcipher variations in VHDL and synthesise them using Synopsys DesignVision 2007.12 and the Virtual Silicon (VST) main cell library UMCL18G212T3, which is based on the UMC L180 0.18$\mu$m in order to calculate the effectiveness of the cipher. 1P6M logic process and has a typical voltage of 1.8 Volt
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=7cm, width=12cm]{pics/hardware.png}
-	\caption{Hardware implementation results of some symmetric encryption algorithms.}
+	\caption{comparison with some symmetric encryption algorithms.}
 \end{figure}
 
 \subsection{Conclusions}
-In PRINTcipher they have considered the technology of IC-printing to see how it might influence the  cryptography that we use.They have proposed lightweight block cipher PRINTcipher that explicitly takes advantage of this new manufacturing approach. We related-key cryptanalysis of PRINTcipher.To recover the 80-bit secret key of PRINTcipher-48,related-key differential attack require \(2^47\) related-key chosen plaintexts with a computational complexity of \(2^{60.62}\). Further improvement can be done on the basic related-key attack on the full PRINTcipher-48 by considering 43-round related-key differential characteristics 0 $\rightarrow$ \(Case 1 (0)\) 0.
+In PRINTcipher they have considered the technology of IC-printing to see how it might influence the  cryptography that we use. They have proposed lightweight block cipher PRINTcipher that explicitly takes advantage of this new manufacturing approach. We related-key cryptanalysis of PRINTcipher. To recover the 80-bit secret key of PRINTcipher-48,related-key differential attack require \(2^{47}\) related-key chosen plaintexts with a computational complexity of \(2^{60.62}\). Further improvement can be done on the basic related-key attack on the full PRINTcipher-48 by considering 43-round instead of 48 round related-key.
 
 
 
@@ -324,12 +247,12 @@ In PRINTcipher they have considered the technology of IC-printing to see how it 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=1cm, width=5cm]{pics/testvector1.png}
-	\caption{Testvector for PRINTcipher-48 in hexadecimal notationAT}
+	\caption{Sample Input and Output for PRINTcipher-48}
 \end{figure}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=3cm, width=7cm]{pics/testvector-2.png}
-	\caption{Testvectors for PRINTcipher-96 in hexadecimal notation}
+	\caption{Sample Testvectors for the cipher}
 \end{figure}
 \begin{figure}[ht]
 	\centering
@@ -371,6 +294,21 @@ As the cipher was designed by focusing more on the hardware efficiency, the perf
 	\caption{Figure: Login Mechanism Flow Chart}
 \end{figure}
 
+\section{References}
+
+\begin{enumerate}[label={[\arabic*]}]
+	
+	\item Lars Knudsen, Gregor Leander, Axel Poschmann, and Matthew J.B. Robshaw, “PRINTcipher: A Block Cipher for IC-Printing”, CHES,  2010.
+	
+	\item Leander, Gregor and Abdelraheem, Mohamed Ahmed and AlKhzaimi, Hoda and Zenner, Erik, “A Cryptanalysis of PRINTcipher: The Invariant Subspace Attack”, Springer Berlin Heidelberg, 2011.
+	
+	\item Yuseop Lee, Kitae Jeong, Changhoon Lee, Jaechul Sung, Seokhie hong, “Related-key cryptanalysis on the full PRINTcipher suitable for IC-printing“, International Journal of Distributed Sensor Networks, 2014.
+	
+	\item Tadashi Okabe, “Efficient FPGA Implementations of PRINTCIPHER”, eISSN: 2349-5162, 2016.
+	
+	\item Daemen, Joan and Rijmen, Vincent, “The Block Cipher Rijndael”, Springer Berlin Heidelberg, 2000.
+	
+\end{enumerate}
 %%%% 8. BILBIOGRAPHY %%%%
 %\bibliographystyle{alpha}
 %\bibliography{}

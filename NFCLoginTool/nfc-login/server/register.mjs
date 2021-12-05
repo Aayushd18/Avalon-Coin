@@ -33,5 +33,3 @@ export const print_cipher = async (text) => {
   return result
 };
 
-let Cipher = await print_cipher("fes");
-console.log(Cipher)
