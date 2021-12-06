@@ -14,6 +14,6 @@ The Login page is shown below :-
 <br />
 <br />
 
-<img src="./ppt10.png"
+<img src="./login.png"
   alt="login page"
   style="float: left; margin-left: 60px; margin-right: 10px; width: 80%; height: 40%;" />
